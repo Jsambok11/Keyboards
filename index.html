@@ -1,0 +1,713 @@
+<DOCTYPE html>
+<html lang = "sv">
+<head>
+  <meta charset="utf-8">
+  <title> Keyboard </title>
+  <link href="huj.css" rel="stylesheet">
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  h3{
+    color: white;
+  }
+  h2{
+    color: white;
+  }
+  #gorny {
+
+  width: 97vw;
+  height: 10px;
+  }
+
+  .gorne {
+  margin-top: 14px;
+  float: left;
+  background-color: black;
+  width: 82.5px;
+  height: 42.5px;
+  margin-right: 5px;
+  }
+
+  #esc {
+    margin-left: 25px;
+  }
+
+  #numery {
+    height: 0px;
+    width: 97vw;
+  }
+  .numerowe {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+  }
+  #pirszy {
+    margin-left: 25px;
+  }
+  #backspace {
+    width: 160px;
+  }
+  #Tabowa {
+    height: 10px;
+    width: 97vw;
+  }
+  .taby {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+  }
+  #tabu {
+    margin-left: 25px;
+    width: 130px;
+  }
+
+  #kapslokowa {
+    width: 97vw;
+  }
+
+  .capsloki
+  {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+  }
+  #caps {
+    margin-left: 25px;
+    width: 180px;
+  }
+  #shiftowa {
+    width: 97vw;
+    height: 10px;
+
+  }
+  .shifty
+  {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+  }
+  #lshift {
+    width: 110px;
+    margin-left: 25px;
+  }
+  #rshift {
+    width: 230px;
+  }
+
+  #enter {
+    float: right;
+    margin-right: 115px;
+    background-color: black;
+    margin-top: 14px;;
+    width: 110px;
+    height: 10px;
+    background-color: blue;
+  }
+  #gura {
+    width: 110px;
+    height: 85px;
+    background-color: black;
+  }
+  #dul {
+    width: 60px;
+    height: 100px;
+    background-color: black;
+    margin-left: 50px;
+  }
+  #dolna {
+  height: 10px;
+  width: 97vw;
+  }
+  .dolnoe
+  {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+  }
+  #lctr {
+   width: 110px;
+   margin-left: 25px;
+  }
+  #space {
+    width: 465px;
+  }
+  #pageup {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 46.5px;
+    margin-right: 23px;
+    }
+  #up {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 46.5px;
+    margin-right: 23px;
+    }
+  #pagedown {
+    margin-top: 14px;
+    float: left;
+    background-color: black;
+    width: 85px;
+    height: 46.5px;
+    margin-right: 5px;
+  }
+  #sczauki {
+    float: right;
+    margin-right: 120px;
+    height: 10px;
+    width: 320px;
+  }
+  #left {
+    margin-top: 5px;
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 46.5px;
+    margin-right: 7px;
+  }
+  #down {
+    margin-top: 5px;
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 46.5px;
+    margin-right: 7px;
+  }
+  #right {
+    margin-top: 5px;
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 46.5px;
+    margin-right: 6px;
+  }
+  #zasady {
+    margin-top: 75vh;
+    width: 60vw;
+    font-size: 11px;
+  }
+  #slowo1{
+    font-size: 40px;
+    margin-right: 50vw;
+    float: right;
+    background-color: black;
+  }
+  #slowo2{
+    font-size: 40px;
+    float: right;
+    margin-right: 5vw;
+    background-color: black;
+  }
+
+  </style>
+<script>
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+document.addEventListener("keypress", function onEvent(event) {
+if (event.key === "Escape") {
+document.getElementById("esc").style.backgroundColor = "lightblue";
+}
+else if (event.key === "") {
+document.getElementById("lshift").style.backgroundColor = "blue";
+}
+else if (event.key === "AudioVolumeMute") {
+document.getElementById("f1").style.backgroundColor = "blue";
+}
+else if (event.key === "§") {
+document.getElementById("pirszy").style.backgroundColor = "blue";
+sleep(500).then(() => {
+})
+}
+else if (event.key === "1") {
+document.getElementById("jeden").style.backgroundColor = "blue";
+sleep(100).then(() => {
+document.getElementById("jeden").style.backgroundColor = "black";
+})
+}
+else if (event.key === "2") {
+document.getElementById("dwa").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dwa").style.backgroundColor = "black";
+})
+}
+else if (event.key === "3") {
+document.getElementById("trzy").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("trzy").style.backgroundColor = "black";
+})
+}
+else if (event.key === "4") {
+document.getElementById("cztery").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("cztery").style.backgroundColor = "black";
+})
+
+}
+else if (event.key === "5") {
+document.getElementById("piec").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("piec").style.backgroundColor = "black";
+})
+}
+else if (event.key === "6") {
+document.getElementById("szesc").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("szesc").style.backgroundColor = "black";
+})
+}
+else if (event.key === "7") {
+document.getElementById("siedem").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("siedem").style.backgroundColor = "black";
+})
+}
+else if (event.key === "8") {
+document.getElementById("osiem").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("osiem").style.backgroundColor = "black";
+})
+}
+else if (event.key === "9") {
+document.getElementById("dziewiec").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dziewiec").style.backgroundColor = "black";
+})
+}
+else if (event.key === "0") {
+document.getElementById("zero").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("zero").style.backgroundColor = "black";
+})
+}
+else if (event.key === "+") {
+document.getElementById("jedenascie").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("jedenascie").style.backgroundColor = "black";
+})
+}
+else if (event.key === "´") {
+document.getElementById("dwanascie").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dwanascie").style.backgroundColor = "black";
+})
+}
+else if (event.key === "Backspace") {
+document.getElementById("backspace").style.backgroundColor = "blue";
+}
+else if (event.key === "Tab") {
+document.getElementById("tabu").style.backgroundColor = "blue";
+}
+else if (event.key === "q") {
+document.getElementById("qq").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("qq").style.backgroundColor = "black";
+})
+}
+else if (event.key === "w") {
+document.getElementById("ww").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ww").style.backgroundColor = "black";
+})
+}
+else if (event.key === "e") {
+document.getElementById("ee").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ee").style.backgroundColor = "black";
+})
+}
+else if (event.key === "r") {
+document.getElementById("rr").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("rr").style.backgroundColor = "black";
+})
+}
+else if (event.key === "t") {
+document.getElementById("tt").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("tt").style.backgroundColor = "black";
+})
+}
+else if (event.key === "y") {
+document.getElementById("yy").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("yy").style.backgroundColor = "black";
+})
+}
+else if (event.key === "u") {
+document.getElementById("uu").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("uu").style.backgroundColor = "black";
+})
+}
+else if (event.key === "i") {
+document.getElementById("ii").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ii").style.backgroundColor = "black";
+})
+}
+else if (event.key === "o") {
+document.getElementById("oo").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("oo").style.backgroundColor = "black";
+})
+}
+else if (event.key === "p") {
+document.getElementById("pp").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("pp").style.backgroundColor = "black";
+})
+}
+else if (event.key === "å") {
+document.getElementById("ao").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ao").style.backgroundColor = "black";
+})
+}
+else if (event.key === "¨") {
+document.getElementById("pindel").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("pindel").style.backgroundColor = "black";
+})
+}
+else if (event.key === "Enter") {
+document.getElementById("gura").style.backgroundColor = "blue";
+document.getElementById("dul").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dul").style.backgroundColor = "black";
+document.getElementById("gura").style.backgroundColor = "black";
+})
+}
+else if (event.key === "CapsLock") {
+document.getElementById("caps").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("caps").style.backgroundColor = "black";
+})
+}
+else if (event.key === "a") {
+document.getElementById("aa").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("aa").style.backgroundColor = "black";
+})
+}
+else if (event.key === "s") {
+document.getElementById("ss").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ss").style.backgroundColor = "black";
+})
+}
+else if (event.key === "d") {
+document.getElementById("dd").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dd").style.backgroundColor = "black";
+})
+}
+else if (event.key === "f") {
+document.getElementById("ff").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ff").style.backgroundColor = "black";
+})
+}
+else if (event.key === "g") {
+document.getElementById("gg").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("gg").style.backgroundColor = "black";
+})
+}
+else if (event.key === "h") {
+document.getElementById("hh").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("hh").style.backgroundColor = "black";
+})
+}
+else if (event.key === "j") {
+document.getElementById("jj").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("jj").style.backgroundColor = "black";
+})
+}
+else if (event.key === "k") {
+document.getElementById("kk").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("kk").style.backgroundColor = "black";
+})
+}
+else if (event.key === "l") {
+document.getElementById("ll").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ll").style.backgroundColor = "black";
+})
+}
+else if (event.key === "ö") {
+document.getElementById("oa").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("oa").style.backgroundColor = "black";
+})
+}
+else if (event.key === "ä") {
+document.getElementById("ae").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("ae").style.backgroundColor = "black";
+})
+}
+else if (event.key === "'") {
+document.getElementById("gwiazda").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("gwiazda").style.backgroundColor = "black";
+})
+}
+else if (event.key === "shift") {
+document.getElementById("lshift").style.backgroundColor = "blue";
+document.getElementById("rshift").style.backgroundColor = "blue";
+}
+else if (event.key === "<") {
+document.getElementById("szcz").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("szcz").style.backgroundColor = "black";
+})
+}
+else if (event.key === "z") {
+document.getElementById("zz").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("zz").style.backgroundColor = "black";
+})
+}
+else if (event.key === "x") {
+document.getElementById("xx").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("xx").style.backgroundColor = "black";
+})
+}
+else if (event.key === "c") {
+document.getElementById("cc").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("cc").style.backgroundColor = "black";
+})
+}
+else if (event.key === "v") {
+document.getElementById("vv").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("vv").style.backgroundColor = "black";
+})
+}
+else if (event.key === "b") {
+document.getElementById("bb").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("bb").style.backgroundColor = "black";
+})
+}
+else if (event.key === "n") {
+document.getElementById("nn").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("nn").style.backgroundColor = "black";
+})
+}
+else if (event.key === "m") {
+document.getElementById("mm").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("mm").style.backgroundColor = "black";
+})
+}
+else if (event.key === ",") {
+document.getElementById("punkt").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("punkt").style.backgroundColor = "black";
+})
+}
+else if (event.key === ".") {
+document.getElementById("dot").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("dot").style.backgroundColor = "black";
+})
+}
+else if (event.key === "-") {
+document.getElementById("plyta").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("plyta").style.backgroundColor = "black";
+})
+}
+else if (event.key === "Control") {
+document.getElementById("lctr").style.backgroundColor = "blue";
+document.getElementById("rctr").style.backgroundColor = "blue";
+}
+else if (event.key === "Meta") {
+document.getElementById("windows").style.backgroundColor = "blue";
+}
+else if (event.key === "Alt") {
+document.getElementById("alt").style.backgroundColor = "blue";
+}
+else if (event.key === " ") {
+document.getElementById("space").style.backgroundColor = "blue";
+sleep(500).then(() => {
+document.getElementById("space").style.backgroundColor = "black";
+})
+}
+else if (event.key === "AltGraph") {
+document.getElementById("altgr").style.backgroundColor = "blue";
+}
+else if (event.key === "PageUp") {
+document.getElementById("pageup").style.backgroundColor = "blue";
+}
+else if (event.key === "ArrowUp") {
+document.getElementById("up").style.backgroundColor = "blue";
+}
+else if (event.key === "PageDown") {
+document.getElementById("pagedown").style.backgroundColor = "blue";
+}
+else if (event.key === "ArrowLeft") {
+document.getElementById("left").style.backgroundColor = "blue";
+}
+else if (event.key === "ArrowDown") {
+document.getElementById("down").style.backgroundColor = "blue";
+}
+else if (event.key === "ArrowRight") {
+document.getElementById("right").style.backgroundColor = "blue";
+}
+else if (event.key === "h") {
+document.getElementById("right").style.backgroundColor = "blue";
+sleep(601).then(() => {
+document.getElementById("hh").style.backgroundColor = "green";
+}
+
+)
+}
+});
+</script>
+</head>
+<body>
+  <div id="przechuj">
+<div id="gorny">
+  <div class="gorne" id="esc"> <h3> esc </h3> </div>
+  <div class="gorne" id="f1"> <h3> f1 </h3> </div>
+  <div class="gorne" id="f2"> <h3> f2 </h3></div>
+  <div class="gorne" id="f3"> <h3> f3 </h3></div>
+  <div class="gorne" id="f4"> <h3> f4 </h3></div>
+  <div class="gorne" id="f5"><h3> f5 </h3> </div>
+  <div class="gorne" id="f6"> <h3> f6 </h3></div>
+  <div class="gorne" id="f7"> <h3> f7 </h3></div>
+  <div class="gorne" id="f8"> <h3> f8 </h3></div>
+  <div class="gorne" id="f9"> <h3> f9 </h3></div>
+  <div class="gorne" id="f10"> <h3> f10 </h3></div>
+  <div class="gorne" id="f11"> <h3> f11 </h3></div>
+  <div class="gorne" id="f12"> <h3> f12 </h3></div>
+  <div class="gorne" id="ptrscr"><h3> ptrscr</h3><h3></h3> </div>
+  <div class="gorne" id="insert"> <h3> insert </h3></div>
+  <div class="gorne" id="delete"><h3> delete</h3> </div>
+</div>
+<div id="numery">
+  <div class="numerowe" id="pirszy"> <h2> § </h2></div>
+  <div class="numerowe" id="jeden"> <h2>1</h2></div>
+  <div class="numerowe" id="dwa"> <h2>2</h2></div>
+  <div class="numerowe" id="trzy"> <h2>3</h2></div>
+  <div class="numerowe" id="cztery"> <h2>4</h2></div>
+  <div class="numerowe" id="piec"><h2>5</h2> </div>
+  <div class="numerowe" id="szesc"><h2>6</h2> </div>
+  <div class="numerowe" id="siedem"> <h2>7</h2></div>
+  <div class="numerowe" id="osiem"> <h2>8</h2></div>
+  <div class="numerowe" id="dziewiec"> <h2>9</h2></div>
+  <div class="numerowe" id="zero"><h2>0</h2> </div>
+  <div class="numerowe" id="jedenascie"><h2>+</h2> </div>
+  <div class="numerowe" id="dwanascie"><h2>´</h2> </div>
+  <div class="numerowe" id="backspace"> <h2> Backspace </h2></div>
+</div>
+<div id="Tabowa">
+  <div class="taby" id="tabu"><h2> Tab </h2> </div>
+  <div class="taby" id="qq"> <h2> Q </h2></div>
+  <div class="taby" id="ww"> <h2>W</h2></div>
+  <div class="taby" id="ee"><h2>E</h2> </div>
+  <div class="taby" id="rr"> <h2>R</h2><h2></h2></div>
+  <div class="taby" id="tt"> <h2>T</h2></div>
+  <div class="taby" id="yy"><h2>Y</h2><h2></h2> </div>
+  <div class="taby" id="uu"><h2>U</h2> </div>
+  <div class="taby" id="ii"> <h2>I</h2></div>
+  <div class="taby" id="oo"><h2>O</h2> </div>
+  <div class="taby" id="pp"> <h2>P</h2></div>
+  <div class="taby" id="ao"> <h2>Å</h2></div>
+  <div class="taby" id="pindel"> <h2>¨</h2></div>
+</div>
+  <div id="enter">
+  <div id="gura"><h2></h2> Enter </div>
+  <div id="dul"> <h2></h2></div>
+</div>
+<div id="kapslokowa">
+  <div class="capsloki" id="caps"><h2>Caps Lock</h2> </div>
+  <div class="capsloki" id="aa"><h2>A</h2> </div>
+  <div class="capsloki" id="ss"> <h2>S</h2></div>
+  <div class="capsloki" id="dd"><h2>D</h2> </div>
+  <div class="capsloki" id="ff"><h2>F</h2> </div>
+  <div class="capsloki" id="gg"><h2>G</h2> </div>
+  <div class="capsloki" id="hh"><h2>H</h2> </div>
+  <div class="capsloki" id="jj"> <h2>J</h2></div>
+  <div class="capsloki" id="kk"> <h2>K</h2></div>
+  <div class="capsloki" id="ll"> <h2>L</h2></div>
+  <div class="capsloki" id="oa"> <h2>Ö</h2></div>
+  <div class="capsloki" id="ae"> <h2>Ä</h2></div>
+  <div class="capsloki" id="gwiazda"> <h2>''</h2></div>
+</div>
+<div id="shiftowa">
+<div class="shifty" id="lshift"> <h2>LShift</h2></div>
+<div class="shifty" id="szcz"><h2><</h2> </div>
+<div class="shifty" id="zz"><h2>Z</h2> </div>
+<div class="shifty" id="xx"> <h2>X</h2></div>
+<div class="shifty" id="cc"> <h2>C</h2></div>
+<div class="shifty" id="vv"> <h2>V</h2></div>
+<div class="shifty" id="bb"><h2>B</h2> </div>
+<div class="shifty" id="nn"> <h2>N</h2></div>
+<div class="shifty" id="mm"> <h2>M</h2></div>
+<div class="shifty" id="punkt"><h2>,</h2> </div>
+<div class="shifty" id="dot"> <h2>.</h2></div>
+<div class="shifty" id="plyta"><h2>-</h2> </div>
+<div class="shifty" id="rshift"><h2>RShift</h2> </div>
+</div>
+<div id="dolna">
+  <div class="dolnoe" id="lctr"> <h2> LCtrl</h2></div>
+  <div class="dolnoe" id="fn"> <h2> Fn</h2></div>
+  <div class="dolnoe" id="windows"> <h3> windows </h3></div>
+  <div class="dolnoe" id="alt"> <h2> LAlt</h2></div>
+  <div class="dolnoe" id="space"><h2></h2> </div>
+  <div class="dolnoe" id="altgr"> <h2> RAlt </h2></div>
+  <div class="dolnoe" id="rctr"><h2> RCtrl </h2> </div>
+  <div id="pageup"><h3> page up</h3> </div>
+  <div id="up"> <h2></h2></div>
+  <div id="pagedown"> <h3> page up</h3></div>
+</div>
+<div id="sczauki">
+<div id="left"> </div>
+<div id="down"> </div>
+<div id="right"> </div>
+</div>
+<div id="mouse">
+  <div id="lbutton"> </div>
+  <div id="rbutton"> </div>
+</div>
+</div>
+<!--
+<div id="zasady"> <h1> Write word as fast as possbile, you have 5 second for each word</h1> </div>
+<div id="slowo1"> HEJ </div>
+<div id="slowo2"> NTIG </div>
+</div> -->
+
+</body>
+</html>
